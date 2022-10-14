@@ -1,0 +1,28 @@
+{
+  "name": "bigos-enterprisee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5-Maker-ops/Bigos-Enterprisee.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/5-Maker-ops/Bigos-Enterprisee/issues"
+  },
+  "homepage": "https://github.com/5-Maker-ops/Bigos-Enterprisee#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
