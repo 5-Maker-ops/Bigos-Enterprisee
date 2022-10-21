@@ -14,6 +14,77 @@ const createUser = async (req, res) => {
  }
 };
 
+const getAllUsers = async (req, res) => {
+    try {
+     const users = await User.find({});
+   
+     return res.status(201).json({ data: users });
+    } catch (error) {
+     console.log(error);
+     return res.status(500).end();
+    }
+   };
+
+   module.exports = {
+    createUser,
+    getAllUsers
+   };
+
+   const getOneUser = async (req, res) => {
+    const id = req.params.id
+    try {
+     const user = await User.findOne({ _id: id });
+   
+     if (!user) {
+      return res.status(400).json({ message: 'user not found' });
+    }
+     return res.status(201).json({ data: user });
+    } catch (error) {
+     console.log(error);
+     return res.status(500).end();
+    }
+   };
+
+   module.exports = {
+    createUser,
+    getAllUsers,
+    getOneUser
+   };
+
+   const { createUser, getAllUsers, getOneUser } = require('../controllers/user');
+    // User route
+ router.post('/user', createUser);
+ router.get('/user', getAllUsers);
+ router.get('/user/:id', getOneUser);
+
+ const updateOne = async (req, res) => {
+  const id = req.params.id
+  const content = req.body
+ 
+  try {
+   const user = await User.findOneAndUpdate(
+   { _id: id },
+    content,
+   { new: true }
+  );
+ 
+   if (!user) {
+    return res.status(400).json({ message: 'user not found' });
+  }
+   return res.status(201).json({ data: user });
+  } catch (error) {
+   console.log(error);
+   return res.status(500).end();
+  }
+ };
+
+ module.exports = {
+    createUser,
+    getAllUsers,
+    getOneUser,
+    updateOne
+   };
+
 
 
 module.exports = {

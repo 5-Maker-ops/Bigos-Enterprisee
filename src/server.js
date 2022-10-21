@@ -4,11 +4,6 @@ const express = require('express');
  const connect = require('./modules/connect');
  
  
- app.use(express.json());
- app.use(express.urlencoded({ extended: true }));
-
- 
- 
  
  app.get('/', (req, res) => {
   res.status(200).json({ message: 'Peace' });
@@ -23,7 +18,9 @@ const express = require('express');
     }
    })();
 
-   
+   app.use(express.json());
+ app.use(express.urlencoded({ extended: true }));
+
  
  
  module.exports = app;
