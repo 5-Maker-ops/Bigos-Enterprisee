@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
-   },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/5-Maker-ops/Bigos-Enterprisee.git"
@@ -20,7 +20,7 @@
   "homepage": "https://github.com/5-Maker-ops/Bigos-Enterprisee#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "mongoose": "^6.6.5"
+    "mongoose": "^6.6.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
