@@ -1,7 +1,7 @@
 const express = require('express');
  const app = express();
  
- const connect = require('./modules/connect');
+ const connect = require('../src/utilities/connect');
  
  
  

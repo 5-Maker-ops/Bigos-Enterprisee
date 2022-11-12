@@ -1,4 +1,4 @@
- POST http://localhost:3001/api/user HTTP/1.1
+ POST http://localhost:3009/api/user HTTP/1.1
  content-type: application/json 
  
  {
@@ -7,4 +7,4 @@
   "firstname": "A",
   "minit": "",
   "lastname": "jah"
- }
+ },

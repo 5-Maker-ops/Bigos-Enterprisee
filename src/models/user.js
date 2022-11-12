@@ -7,6 +7,7 @@ const userSchema = new mongoose.Schema(
    required: true,
    unique: true,
    trim: true
+
  },
   password: {
    type: String,
@@ -31,7 +32,16 @@ const userSchema = new mongoose.Schema(
    type: String,
    enum: ['Admin', 'User'], 
    default: 'User'
- }
+ },
+
+ sales: [
+  {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'sale'
+  }
+],
+
+
  },
  { timestamps: true }
 )
