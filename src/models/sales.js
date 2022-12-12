@@ -32,4 +32,4 @@ saleSchema.set('toJSON', {
   }
 })
 const Sale  = mongoose.model('sale', saleSchema)
-module.exports = Sale
+module.exports = Sale;
